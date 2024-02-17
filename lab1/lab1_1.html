@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>КІ-44 Романів</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        alert("Моє перше діалогове вікно");
+        const answer = confirm("Хочете продовжити виконання сценарію на JavaScript");
+        if (answer)
+        {
+            let isValidName = false;
+            let name;
+
+            while (!isValidName) {
+                name = prompt("Введіть ваше ім'я", "");
+                if (name === null || name.trim() === "")
+                {
+                    alert("Будь ласка, введіть ваше ім'я.");
+                }
+                else if (/^[a-zA-Zа-яА-ЯїЇіІєЄґҐ'-\s]+$/.test(name))
+                {
+                    isValidName = true;
+                }
+                else
+                {
+                    alert("Ви ввели неправильне ім'я");
+                }
+            }
+            alert(name + ", у вас вже починає виходити!");
+            const answer2 = confirm("Хочете анегдот?");
+            if (answer2)
+            {
+                alert("Вийшли з сином погуляти, він і каже:\n-Яке небо сьогодні блакитне, як заставка Windows!");
+            }
+            else
+            {
+                alert("Він Вас також не хоче");
+            }
+        }
+        else
+        {
+            alert("Шкода, можна було б ще попрацювати!");
+        }
+    </script>
+</body>
+
+</html>

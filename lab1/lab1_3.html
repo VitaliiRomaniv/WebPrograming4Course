@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>КІ-44 Романів</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        let n = parseInt(prompt("Введіть кількість кутів n", ""));
+        let r = parseInt(prompt("Введіть радіус r", ""));
+        let a = 2 * r * Math.tan(Math.PI / n);
+        let p = a * n;
+        let s = (1 / 2) * n * a * r;
+        alert("Площа =" + s.toFixed(2));
+        alert("Периметр =" + p.toFixed(2));
+        const answer = confirm("Хочете знайти площу повної поверхні паралепіпеда та його об'єм (виміри сторін в сантиметрах)?");
+        if (answer)
+        {
+            let high = parseInt(prompt("Введіть висоту паралепіпеда:", ""));
+            let length = parseInt(prompt("Введіть довжину паралепіпеда:", ""));
+            let width = parseInt(prompt("Введіть ширину паралепіпеда:", ""));
+            let volume = high * length * width;
+            let res = 2 * (length * width + width * high + length * high);
+            alert("Площа повної поверхні паралелепіпеда: " + res + " см2");
+            alert("Об'єм паралелепіпеда: " + volume)
+            alert(volume + " чого? Бананів, огірків чи метрів?")
+            alert("Об'єм паралелепіпеда: " + volume + " см3")
+        }
+        else
+        {
+            alert("Хух добре, що не захотіли ато там такееее...");
+        }
+    </script>
+</body>
+
+</html>
