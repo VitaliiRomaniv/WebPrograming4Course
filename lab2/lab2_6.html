@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Романів Віталій КІ-44</title>
+</head>
+
+<body>
+    <script>
+        document.write("<p style='text-align:center'>Гра \"Вгадай слово\"</p>");
+
+        let words = ["apple", "banana", "orange", "grape", "watermelon"];
+        let secretWord = words[Math.floor(Math.random() * words.length)]; // Вибираємо випадкове слово з масиву
+
+        let attempts = 3; // Обмежена кількість спроб
+        let guessed = false;
+
+        while (attempts > 0 && !guessed) {
+            let guess = prompt("Спробуйте вгадати слово (залишилося спроб: " + attempts + "):").toLowerCase();
+
+            if (guess === secretWord) {
+                guessed = true;
+                document.write("<p>Вітаємо! Ви вгадали слово \"" + secretWord + "\"!</p>");
+            } else {
+                attempts--;
+                if (attempts > 0) {
+                    alert("Неправильно! Спробуйте ще раз.");
+                } else {
+                    document.write("<p>На жаль, ви не вгадали. Загадане слово було \"" + secretWord + "\".</p>");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

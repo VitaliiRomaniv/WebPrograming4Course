@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Романів Віталій КІ-44</title>
+</head>
+
+<body>
+    <script>
+        document.write("<p style='text-align:center'>Використання оператора SWITCH</p>");
+
+        let day = prompt("Введіть номер дня тижня (1-7):");
+        let dayName;
+
+        switch (parseInt(day)) {
+            case 1:
+                dayName = "Понеділок";
+                break;
+            case 2:
+                dayName = "Вівторок";
+                break;
+            case 3:
+                dayName = "Середа";
+                break;
+            case 4:
+                dayName = "Четвер";
+                break;
+            case 5:
+                dayName = "П'ятниця";
+                break;
+            case 6:
+                dayName = "Субота";
+                break;
+            case 7:
+                dayName = "Неділя";
+                break;
+            default:
+                dayName = "Невірний номер дня";
+        }
+
+        document.write("<p>Назва дня: " + dayName + "</p>");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Романів Віталій КІ-44</title>
+</head>
+
+<body>
+    <script>
+        document.write("<p style='text-align:center'>Використання оператора <strong>IF</strong></p>");
+
+        let lang = prompt("Введіть мову (ua, en, pl або de):");
+        let languageName;
+
+        if (lang === "ua") {
+            languageName = "українська";
+        } else if (lang === "en") {
+            languageName = "англійська";
+        } else if (lang === "pl") {
+            languageName = "польська";
+        } else if (lang === "de") {
+            languageName = "німецька";
+        } else {
+            languageName = "Мову невизначено";
+        }
+
+        document.write("<p>Повна назва мови: " + languageName + "</p>");
+    </script>
+</body>
+
+</html>

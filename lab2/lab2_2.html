@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Романів Віталій КІ-44</title>
+</head>
+
+<body>
+    <script>
+        document.write("<p style='text-align:center'>Знаходження найбільшого числа за допомогою оператора IF</p>");
+
+        let num1 = parseFloat(prompt("Введіть перше число:"));
+        let num2 = parseFloat(prompt("Введіть друге число:"));
+        let num3 = parseFloat(prompt("Введіть третє число:"));
+
+        document.write("<p>Введені числа: " + num1 + ", " + num2 + ", " + num3 + "</p>");
+
+        let maxNum;
+
+        if (num1 >= num2 && num1 >= num3) {
+            maxNum = num1;
+        } else if (num2 >= num1 && num2 >= num3) {
+            maxNum = num2;
+        } else {
+            maxNum = num3;
+        }
+
+        document.write("<p>Найбільше число: " + maxNum + "</p>");
+    </script>
+</body>
+
+</html>
