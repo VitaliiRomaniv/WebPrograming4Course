@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <script>
+        // Функція для шифрування рядка
+        function encrypt(text) {
+            const alphabetBig =   'АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЮЯ';
+            const alphabetSmall = 'абвгґдеєжзиіїйклмнопрстуфхцчшщьюя';
+            let encryptedText = '';
+            for (let i = 0; i < text.length; i++) {
+                let index = alphabetBig.indexOf(text[i]);
+                if (index !== -1) {
+                    let nextIndex = (index + 1) % alphabetBig.length;
+                    encryptedText += alphabetBig[nextIndex];
+                } else {
+                    let indexSmallNext = alphabetSmall.indexOf(text[i]);
+                    if (indexSmallNext !== -1)
+                    {
+                        let nextSmallIndex = (indexSmallNext + 1) % alphabetBig.length;
+                        encryptedText += alphabetSmall[nextSmallIndex];
+                    } else {
+                        encryptedText += text[i];
+                    }
+                }
+            }
+            return encryptedText;
+        }
+
+        // Функція для обробки події натискання на кнопку
+        function handleEncrypt() {
+            let inputText = document.getElementById("inputText").value;
+            let encryptedText = encrypt(inputText);
+            document.getElementById("result").innerText = "Зашифрований текст: " + encryptedText;
+        }
+    </script>
+
+    <label for="inputText">Введіть текст українською мовою:</label><br>
+    <input type="text" id="inputText"><br>
+    <button onclick="handleEncrypt()">Зашифрувати</button><br>
+    <div id="result"></div>
+</body>
+</html>

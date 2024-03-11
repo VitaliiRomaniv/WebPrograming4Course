@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <script>
+        // Вихідний рядок
+        let inputString = "A,B,C,D,A,B";
+
+        // Розділення рядка за комами та об'єднання елементів з пробілами
+        let stringWithSpaces = inputString.split(',').join(', ');
+
+        // Підрахунок кількості букв 'A' та 'B'
+        let countA = (inputString.match(/A/g) || []).length;
+        let countB = (inputString.match(/B/g) || []).length;
+
+        // Виведення результуючого рядка та кількості букв 'A' та 'B'
+        document.write("Рядок з пробілами після ком: " + stringWithSpaces + "<br>");
+        document.write("Кількість букв 'A': " + countA + "<br>");
+        document.write("Кількість букв 'B': " + countB + "<br>");
+    </script>
+</body>
+</html>

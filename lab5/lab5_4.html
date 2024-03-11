@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <script>
+        function shuffleLetters(word) {
+            if (word.length <= 2) {
+                return word;
+            }
+
+            let firstLetter = word.charAt(0);
+            let middlePart = word.substring(1, word.length - 1);
+            let lastLetter = word.charAt(word.length - 1);
+
+            let shuffledMiddlePart = middlePart.split('').sort(() => Math.random() - 0.5).join('');
+
+            return firstLetter + shuffledMiddlePart + lastLetter;
+        }
+
+        function shuffleWordsInText(text) {
+            let words = text.split(' ');
+            let shuffledWords = words.map(word => shuffleLetters(word));
+            return shuffledWords.join(' ');
+        }
+
+        function handleShuffle() {
+            let inputText = document.getElementById("inputText").value;
+            let shuffledText = shuffleWordsInText(inputText);
+            document.getElementById("result").innerText = "Після перемішування букв: " + shuffledText;
+        }
+    </script>
+
+    <label for="inputText">Введіть текст:</label><br>
+    <textarea id="inputText" rows="4" cols="50"></textarea><br>
+    <button onclick="handleShuffle()">Перемішати</button><br>
+    <div id="result"></div>
+</body>
+</html>

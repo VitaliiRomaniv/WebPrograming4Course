@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <script>
+        // Вихідний рядок
+        let inputString = "This is a sample sentence.";
+
+        // Розділення рядка на слова
+        let words = inputString.split(" ");
+
+        // Підрахунок кількості літер у третьому слові
+        let thirdWordLength = words[2].length;
+
+        // Поміняти місцями перше та останнє слова
+        let temp = words[0];
+        words[0] = words[words.length - 1];
+        words[words.length - 1] = temp;
+
+        // Виведення результатів
+        document.write("Кількість літер у третьому слові: " + thirdWordLength + "<br>");
+        document.write("Рядок з першим та останнім словами помінятими місцями: " + words.join(" "));
+    </script>
+</body>
+</html>
