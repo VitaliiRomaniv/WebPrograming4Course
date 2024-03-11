@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <h1>Інформація про мобільний телефон</h1>
+
+    <script>
+        let mobilePhone = {
+            type: "Смартфон",
+            operatingSystem: "Android",
+            screenSize: "6.5 дюймів",
+            screenResolution: "1080x2400 пікселів",
+            RAM: "6 ГБ",
+            displayInfo: function() {
+                document.write("<p>Тип: " + this.type + "</p>");
+                document.write("<p>Операційна система: " + this.operatingSystem + "</p>");
+                document.write("<p>Розмір екрану: " + this.screenSize + "</p>");
+                document.write("<p>Роздільна здатність екрана: " + this.screenResolution + "</p>");
+                document.write("<p>Оперативна пам'ять: " + this.RAM + "</p>");
+            }
+        };
+
+        // Виведення інформації про об'єкт
+        mobilePhone.displayInfo();
+    </script>
+</body>
+</html>

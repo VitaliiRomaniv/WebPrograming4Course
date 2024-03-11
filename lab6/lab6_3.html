@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <script>
+        class MobilePhone {
+            constructor(type, operatingSystem, screenSize, screenResolution, RAM) {
+                this._type = type;
+                this._operatingSystem = operatingSystem;
+                this._screenSize = screenSize;
+                this._screenResolution = screenResolution;
+                this._RAM = RAM;
+                this._marketReleaseDate = new Date();
+            }
+
+            get type() {
+                return this._type;
+            }
+
+            get operatingSystem() {
+                return this._operatingSystem;
+            }
+
+            get screenSize() {
+                return this._screenSize;
+            }
+
+            get screenResolution() {
+                return this._screenResolution;
+            }
+
+            get RAM() {
+                return this._RAM;
+            }
+
+            get marketReleaseDate() {
+                return this._marketReleaseDate;
+            }
+
+            set type(value) {
+                this._type = value;
+            }
+
+            set operatingSystem(value) {
+                this._operatingSystem = value;
+            }
+
+            set screenSize(value) {
+                this._screenSize = value;
+            }
+
+            set screenResolution(value) {
+                this._screenResolution = value;
+            }
+
+            set RAM(value) {
+                this._RAM = value;
+            }
+
+            displayInfo() {
+                console.log(`Тип: ${this._type}`);
+                console.log(`Операційна система: ${this._operatingSystem}`);
+                console.log(`Розмір екрану: ${this._screenSize}`);
+                console.log(`Роздільна здатність екрана: ${this._screenResolution}`);
+                console.log(`Оперативна пам'ять: ${this._RAM}`);
+                console.log(`Дата виходу на ринок: ${this._marketReleaseDate.toLocaleDateString()}`);
+            }
+        }
+
+        // Створення об'єкта
+        let phone = new MobilePhone("Смартфон", "Android", "6.5 дюймів", "1080x2400 пікселів", "6 ГБ");
+
+        // Використання методів і гетерів/сетерів
+        phone.displayInfo(); // Виведе інформацію про телефон
+
+        // Зміна деяких властивостей телефону
+        phone.type = "Ноутбук";
+        phone.operatingSystem = "iOS";
+        phone.screenSize = "7 дюймів";
+        phone.screenResolution = "2048x1536 пікселів";
+        phone.RAM = "8 ГБ";
+
+        phone.displayInfo(); // Виведе оновлену інформацію про телефон
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <h1>Інформація про мобільний телефон</h1>
+
+    <script>
+        function MobilePhone(type, operatingSystem, screenSize, screenResolution, RAM) {
+            this.type = type;
+            this.operatingSystem = operatingSystem;
+            this.screenSize = screenSize;
+            this.screenResolution = screenResolution;
+            this.RAM = RAM;
+            this.marketReleaseDate = new Date();
+        }
+
+        // Додавання методу в прототип
+        MobilePhone.prototype.displayInfo = function() {
+            document.write("<p>Тип: " + this.type + "</p>");
+            document.write("<p>Операційна система: " + this.operatingSystem + "</p>");
+            document.write("<p>Розмір екрану: " + this.screenSize + "</p>");
+            document.write("<p>Роздільна здатність екрана: " + this.screenResolution + "</p>");
+            document.write("<p>Оперативна пам'ять: " + this.RAM + "</p>");
+            document.write("<p>Дата виходу на ринок: " + this.marketReleaseDate.toLocaleDateString() + "</p>");
+        };
+
+        // Гетери та сеттери
+        Object.defineProperty(MobilePhone.prototype, 'type', {
+            get: function() {
+                return this._type;
+            },
+            set: function(value) {
+                this._type = value;
+            }
+        });
+
+        Object.defineProperty(MobilePhone.prototype, 'operatingSystem', {
+            get: function() {
+                return this._operatingSystem;
+            },
+            set: function(value) {
+                this._operatingSystem = value;
+            }
+        });
+
+        Object.defineProperty(MobilePhone.prototype, 'screenSize', {
+            get: function() {
+                return this._screenSize;
+            },
+            set: function(value) {
+                this._screenSize = value;
+            }
+        });
+
+        Object.defineProperty(MobilePhone.prototype, 'screenResolution', {
+            get: function() {
+                return this._screenResolution;
+            },
+            set: function(value) {
+                this._screenResolution = value;
+            }
+        });
+
+        Object.defineProperty(MobilePhone.prototype, 'RAM', {
+            get: function() {
+                return this._RAM;
+            },
+            set: function(value) {
+                this._RAM = value;
+            }
+        });
+
+        // Створення об'єкта
+        let phone = new MobilePhone("Смартфон", "Android", "6.5 дюймів", "1080x2400 пікселів", "6 ГБ");
+
+        // Виведемо початкову інформацію
+        document.write("<h2>Початкова інформація про телефон:</h2>");
+        phone.displayInfo();
+
+        // Змінимо деякі властивості телефону за допомогою сеттерів
+        phone.type = "Ноутбук";
+        phone.operatingSystem = "iOS";
+        phone.screenSize = "7 дюймів";
+        phone.screenResolution = "2048x1536 пікселів";
+        phone.RAM = "8 ГБ";
+
+        // Виведемо оновлену інформацію
+        document.write("<h2>Оновлена інформація про телефон:</h2>");
+        phone.displayInfo();
+    </script>
+</body>
+</html>

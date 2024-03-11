@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <script>
+        class Smartphone {
+            constructor(type, operatingSystem, screenSize, screenResolution, RAM, marketReleaseDate, price) {
+                this._type = type;
+                this._operatingSystem = operatingSystem;
+                this._screenSize = screenSize;
+                this._screenResolution = screenResolution;
+                this._RAM = RAM;
+                this._marketReleaseDate = new Date(marketReleaseDate);
+                this._price = parseFloat(price);
+            }
+
+            get price() {
+                return this._price;
+            }
+
+            set price(value) {
+                this._price = value;
+            }
+        }
+
+        // Створення масиву об'єктів
+        let smartphones = [
+            new Smartphone("Смартфон", "Android", "6.5 дюймів", "1080x2400 пікселів", "6 ГБ", "2024-03-12", "600"),
+            new Smartphone("Смартфон", "iOS", "6.1 дюймів", "828x1792 пікселів", "4 ГБ", "2024-03-15", "900"),
+            new Smartphone("Смартфон", "Android", "6.7 дюймів", "1440x3200 пікселів", "8 ГБ", "2024-03-10", "1200"),
+            new Smartphone("Смартфон", "Android", "6.2 дюймів", "1080x2340 пікселів", "8 ГБ", "2024-03-20", "800"),
+        ];
+
+        // Знаходимо об'єкти з максимальною та мінімальною вартістю
+        let maxPriceObject = smartphones.reduce((a, b) => (a.price > b.price) ? a : b);
+        let minPriceObject = smartphones.reduce((a, b) => (a.price < b.price) ? a : b);
+
+        // Знаходимо сумарну вартість усіх об'єктів
+        let totalPrices = smartphones.reduce((total, smartphone) => total + smartphone.price, 0);
+
+        // Обчислюємо середню вартість об'єкта
+        let averagePrice = totalPrices / smartphones.length;
+
+        // Підраховуємо кількість об'єктів із вартістю вище за середню
+        let aboveAverageCount = smartphones.filter(smartphone => smartphone.price > averagePrice).length;
+
+        console.log("Об'єкт з максимальною вартістю:", maxPriceObject);
+        console.log("Об'єкт з мінімальною вартістю:", minPriceObject);
+        console.log("Сумарна вартість усіх об'єктів:", totalPrices);
+        console.log("Середня вартість об'єкта:", averagePrice);
+        console.log("Кількість об'єктів із вартістю вище за середню:", aboveAverageCount);
+    </script>
+</body>
+</html>
