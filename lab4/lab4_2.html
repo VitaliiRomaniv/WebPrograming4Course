@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <script>
+        // Функція для генерації випадкового числа в заданому діапазоні
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Створення масиву з випадковими числами
+        let arr = [];
+        for (let i = 0; i < 15; i++) {
+            arr.push(getRandomInt(1, 100));
+        }
+
+        // Виведення значень масиву на екран у рядок
+        document.write("Масив: " + arr.join(", ") + "<br>");
+
+        // Знайти мінімальний елемент та поміняти його місцями з попереднім елементом масиву
+        let minIndex = 0;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[minIndex]) {
+                minIndex = i;
+            }
+        }
+        if (minIndex > 0) {
+            let temp = arr[minIndex - 1];
+            arr[minIndex - 1] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+
+        // Виведення зміненого масиву на екран
+        document.write("Масив після виконання завдання: " + arr.join(", "));
+    </script>
+</body>
+</html>

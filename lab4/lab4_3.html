@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <script>
+        // Функція для генерації випадкового числа в заданому діапазоні
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Створення масиву з випадковими числами
+        let arr = [];
+        for (let i = 0; i < 15; i++) {
+            arr.push(getRandomInt(1, 100));
+        }
+
+        // Виведення значень масиву на екран у рядок
+        document.write("Масив: " + arr.join(", ") + "<br>");
+
+        // Задання значень для С і D
+        let C = 50;
+        let D = 30;
+
+        // Знайдемо суму чисел, менших за задане D
+        let sumLessThanD = arr.filter(num => num < D).reduce((acc, curr) => acc + curr, 0);
+        document.write("Сума чисел, менших за " + D + ": " + sumLessThanD + "<br>");
+
+        // Знайдемо кількість чисел, що стоять на парних місцях і більших за задане C
+        let countEvenGreaterThanC = arr.filter((num, index) => index % 2 === 0 && num > C).length;
+        document.write("Кількість чисел, що стоять на парних місцях і більших за " + C + ": " + countEvenGreaterThanC);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романів Віталій КІ-44</title>
+</head>
+<body>
+    <script>
+        // Створення масиву "трикутних" чисел
+        let Treag = [];
+        for (let n = 1; n <= 10; n++) {
+            Treag.push(n * (n + 1) / 2);
+        }
+
+        // Виведення значень масиву Treag на екран у рядок
+        document.write("Трикутні числа: " + Treag.join("  ") + "<br>");
+
+        // Створення масиву квадратів натуральних чисел від 1 до 10
+        let kvd = [];
+        for (let i = 1; i <= 10; i++) {
+            kvd.push(i * i);
+        }
+
+        // Виведення значень масиву kvd на екран у рядок
+        document.write("Квадрати натуральних чисел: " + kvd.join("  ") + "<br>");
+
+        // Об'єднання масивів Treag і kvd в масив rez
+        let rez = Treag.concat(kvd);
+
+        // Виведення значень масиву rez на екран
+        document.write("Об'єднані масиви: " + rez.join("  ") + "<br>");
+
+        // Відсортування масиву rez у зворотному порядку
+        rez.reverse();
+
+        // Виведення відсортованих значень масиву rez на екран
+        document.write("Відсортовані в зворотному порядку: " + rez.join("  "));
+    </script>
+</body>
+</html>
