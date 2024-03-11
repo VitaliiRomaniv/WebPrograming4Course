@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Романів Віталій КІ-44</title>
+</head>
+
+<body>
+    <script>
+        // Функція, яка приймає іншу функцію як аргумент
+        function applyFunction(func, value) {
+            return func(value);
+        }
+
+        // Функція, яка додає 10 до числа
+        function addTen(number) {
+            return number + 10;
+        }
+
+        // Виклик функції applyFunction з передачею функції addTen як аргумент та числа 5
+        let result = applyFunction(addTen, 5);
+        document.write("<p>Результат виконання функції addTen: " + result + "</p>");
+
+        // Функція, яка множить число на 2
+        function multiplyByTwo(number) {
+            return number * 2;
+        }
+
+        // Виклик функції applyFunction з передачею функції multiplyByTwo як аргумент та числа 7
+        result = applyFunction(multiplyByTwo, 7);
+        document.write("<p>Результат виконання функції multiplyByTwo: " + result + "</p>");
+    </script>
+</body>
+
+</html>

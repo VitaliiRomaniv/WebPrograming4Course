@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Романів Віталій КІ-44</title>
+</head>
+
+<body>
+    <div style="font-size: 64px; text-align: center;">
+        <script>
+            "use strict";
+            let today = new Date();
+
+            // Запитати користувача ввести свою дату народження
+            let birthDateString = prompt("Будь ласка, введіть свою дату народження у форматі 'рік-місяць-день', наприклад, '1990-01-01'");
+            let birthDate = new Date(birthDateString);
+
+            // Перевірка чи введена коректна дата народження
+            if (isNaN(birthDate.getTime())) {
+                document.write("Ви ввели некоректну дату народження.");
+            } else {
+                // Розрахунок кількості днів до дати народження
+                const day = 86400000;
+                const hour = 3600000;
+                const minute = 60000;
+                let time = birthDate.getTime() - today.getTime();
+                let days = Math.floor(time / day);
+                let hours = Math.floor((time - days * day) / hour);
+                let minutes = Math.floor((time - days * day - hours * hour) / minute);
+                let str = "До вашого дня народження залишилося " + days + " днів, " + hours + " годин, " + minutes + " хвилин.";
+                document.write(str);
+            }
+        </script>
+    </div>
+</body>
+
+</html>

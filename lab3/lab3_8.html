@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Романів Віталій КІ-44</title>
+</head>
+
+<body>
+    <script>
+        // Функція, яка приймає довільну кількість аргументів та виводить їх
+        function showArguments() {
+            document.write("<p>Кількість аргументів: " + arguments.length + "</p>");
+            for (let i = 0; i < arguments.length; i++) {
+                document.write("<p>Аргумент " + (i + 1) + ": " + arguments[i] + "</p>");
+            }
+        }
+
+        // Виклик функції з різною кількістю аргументів
+        showArguments(1, "два", true);
+        showArguments("один");
+        showArguments(3, "чотири", false, "п'ять");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Романів Віталій КІ-44</title>
+</head>
+
+<body>
+    <script>
+        // Функція, яка приймає необов'язковий параметр та параметр за замовчуванням
+        function greet(name = "Гість", greeting = "Привіт") {
+            document.write(`${greeting}, ${name}!`);
+        }
+
+        // Звертання до функції без передачі параметрів
+        document.write("<p>");
+        greet();
+        document.write("</p>");
+
+        // Звертання до функції з передачею лише одного параметра
+        document.write("<p>");
+        greet("Іван");
+        document.write("</p>");
+
+        // Звертання до функції з передачею обох параметрів
+        document.write("<p>");
+        greet("Марія", "Доброго дня");
+        document.write("</p>");
+    </script>
+</body>
+
+</html>

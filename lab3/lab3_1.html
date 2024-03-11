@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Романів Віталій КІ-44</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        function weekDay(day) {
+            let days = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"];
+            let sizes = [74, 64, 54, 44, 34, 24, 14];
+            let colors = ["blue", "lightgreen", "brown", "red", "darkgreen", "blue", "black"];
+            let index = days.indexOf(day);
+            let size = sizes[index] || 20; // Шрифт за замовчуванням - 20
+            let color = colors[index] || "black"; // Колір за замовчуванням - чорний
+            return `<div style="font-size: ${size}px; color: ${color}; text-align: center;">${day}</div>`;
+        }
+
+        document.write(weekDay("Понеділок"));
+        document.write(weekDay("Вівторок"));
+        document.write(weekDay("Середа"));
+        document.write(weekDay("Четвер"));
+        document.write(weekDay("П'ятниця"));
+        document.write(weekDay("Субота"));
+        document.write(weekDay("Неділя"));
+    </script>
+</body>
+
+</html>

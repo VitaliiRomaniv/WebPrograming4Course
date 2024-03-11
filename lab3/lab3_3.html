@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Романів Віталій КІ-44</title>
+</head>
+
+<body>
+    <script>
+        // Опис функції виведення рядка з можливістю зміни тегу для переходу на новий рядок, кольору та шрифту
+        function PrintWithBreak(txt, tag = "br", color = "black", fontSize = "medium") {
+            document.write(`<${tag} style="color: ${color}; font-size: ${fontSize};">${txt}</${tag}>`);
+        }
+
+        // Звертання до функції з передачею фактичних параметрів та можливістю вказати інший тег для переходу на новий рядок, кольору та шрифту
+        PrintWithBreak("Це перший рядок", "p", "blue", "24px");
+        PrintWithBreak("Це другий рядок", "div", "green", "36px");
+        PrintWithBreak("Це ще один рядок", "span", "red", "48px");
+    </script>
+</body>
+
+</html>
